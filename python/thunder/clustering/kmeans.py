@@ -1,5 +1,5 @@
 """
-Classes for KMeans clustering
+Classes for KMeans clustering -test ac
 """
 
 from numpy import array, argmin, corrcoef, ndarray, asarray, std
@@ -130,8 +130,6 @@ class KMeans(object):
             raise Exception('Input must be Series or a subclass (e.g. RowMatrix)')
 
         import pyspark.mllib.clustering as mllib
-
         model = mllib.KMeans.train(data.astype('float').rdd.values(), k=self.k, maxIterations=self.maxIterations)
-
         return KMeansModel(asarray(model.clusterCenters))
 
