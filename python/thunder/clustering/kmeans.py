@@ -1,5 +1,5 @@
 """
-Classes for KMeans clustering -test ac
+Classes for KMeans clustering -test ac 
 """
 
 from numpy import array, argmin, corrcoef, ndarray, asarray, std
